@@ -13,6 +13,8 @@ Here is an example of deploying a `Deno` + `Fresh` application to `Cloudflare Wo
 
 ## Setup
 
+### install
+
 ```shell
 # setup deno
 brew install mise
@@ -20,6 +22,16 @@ mise install
 
 git clone git@github.com:treetips/deno-fresh-cloudflare-workers-example.git
 cd deno-fresh-cloudflare-workers-example && deno install
+```
+
+### .env
+
+```shell
+cat << EOT > .env
+# System environment variables https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+CLOUDFLARE_ACCOUNT_ID=<your account id>
+CLOUDFLARE_API_TOKEN=<your api token>
+EOT
 ```
 
 ## Usage
