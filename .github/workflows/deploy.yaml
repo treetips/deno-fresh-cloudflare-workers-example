@@ -1,0 +1,36 @@
+name: Deploy to Cloudflare Workers
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Mask secrets
+        run: echo "::add-mask::${{ secrets.CLOUDFLARE_WORKERS_URL }}"
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+          cache: true
+
+      - name: Install package
+        run: deno install --allow-scripts=npm:@tailwindcss/oxide,npm:workerd,npm:sharp
+
+      - name: Build package
+        run: deno task build
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

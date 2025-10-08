@@ -1,0 +1,85 @@
+{
+  "biome.enabled": false,
+  "breadcrumbs.enabled": true,
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "deno.enable": true,
+  "deno.lint": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.hover.sticky": true,
+  "editor.renderControlCharacters": true,
+  "editor.stickyScroll.enabled": false,
+  "files.associations": {
+    "*.env.local": "env",
+    "*.env.development": "env",
+    "*.env.development.local": "env",
+    "*.env.staging": "env",
+    "*.env.staging.local": "env",
+    "*.env.production": "env",
+    "*.env.production.local": "env"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.DS_Store": true
+  },
+  "files.insertFinalNewline": true,
+  "git.mergeEditor": true,
+  // javascript
+  "javascript.suggest.autoImports": true,
+  "javascript.format.enable": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": false,
+  "path-autocomplete.pathMappings": {
+    "@src": "${folder}/src",
+    "~public": "${folder}/public"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/__snapshots__": true,
+    "**/*.svg": true,
+    ".idea": true,
+    "build": true,
+    "bun.lockb": true,
+    "package-lock.json": true,
+    "pnpm-lock.yaml": true,
+    "yarn.lock": true
+  },
+  // typescript
+  "typescript.suggest.autoImports": true,
+  "typescript.format.enable": false,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": false,
+  "workbench.editor.closeEmptyGroups": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "denoland.vscode-deno",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "IronGeek.vscode-env",
+    "oderwat.indent-rainbow",
+    "usernamehw.errorlens",
+    "vadimcn.vscode-lldb",
+    "yzhang.markdown-all-in-one"
+  ]
+}

@@ -1,0 +1,21 @@
+name = "worker-name"
+main = "./_fresh/server.js"
+# https://developers.cloudflare.com/workers/configuration/compatibility-dates/
+compatibility_date = "2025-10-04"
+# https://developers.cloudflare.com/workers/configuration/compatibility-flags/
+compatibility_flags = ["global_fetch_strictly_public"]
+
+# https://developers.cloudflare.com/workers/wrangler/configuration/#assets
+[assets]
+directory = "_fresh/client/"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+
+# https://developers.cloudflare.com/workers/wrangler/configuration/#observability
+[observability]
+enabled = true
+
+# https://developers.cloudflare.com/workers/wrangler/configuration/#custom-builds
+[build]
+command = "deno task clean && deno task build"
